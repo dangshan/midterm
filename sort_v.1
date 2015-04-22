@@ -1,0 +1,53 @@
+//
+//  sort_v.1
+//  sort.v.1
+//
+//  Created by Nancy Wood on 2015/4/19.
+//  Copyright (c) 2015年 Nancy Wood. All rights reserved.
+//
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main()
+{
+int i, n, *v, arr[], max, temp, j, k;
+strand(time(0));
+n = 10;
+v = (int *) malloc( n * sizeof(int))
+for(i=0; i<n; ++i)
+{
+v[i] = rand() % 100;
+printf("%d,",v[i]);
+}
+printf("\n");
+
+// 選擇排序
+// 選最大值，放在位置n
+// 剩下n-1個選最大值，放在位置n-1
+// 到剩下1個停
+
+for(i=0; i<n; ++i)
+{
+int max=i;
+for(k=0; k<n-2; ++k)
+{
+for(j=0; j<n-k; ++j)
+if(arr[j]>arr[max])
+max=j;
+if(max!=i)
+{
+temp = arr[max];
+arr[max]=arr[i];
+arr[i]=temp;
+}
+for(i=0; i<n; ++i)
+{
+printf("%d,",arr[i]);
+}
+printf("\n");
+}
+}
+
+}
