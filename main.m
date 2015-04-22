@@ -14,7 +14,7 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
-        int i, n, *v, temp, j, k;
+        int i, n, *v, temp, j;
         srand(time(0));
         n = 10;
         v = (int *) malloc( n * sizeof(int));
@@ -24,6 +24,7 @@ int main(int argc, const char * argv[]) {
             printf("%d,",v[i]);
         }
         printf("\n");
+        
         
         // 選擇排序
         // 選最大值，放在位置n
